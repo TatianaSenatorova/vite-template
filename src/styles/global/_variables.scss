@@ -1,0 +1,44 @@
+// Colors
+
+// Default
+
+$color-black: #000000;
+$color-white: #ffffff;
+$color-transparent: transparent;
+
+// Project palette
+
+
+// Typography
+
+$font-primary: 'Inter', 'Arial', sans-serif;
+
+// Animation
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
+$trans-400: 0.4s $tf-default;
+$trans-600: 0.6s $tf-default;
+
+// Viewports
+
+$vp-768: 768px;
+$vp-1024: 1024px;
+$vp-1280: 1280px;
+$vp-1440: 1440px;
+
+// z-indexes
+
+$z-index-zero: 0;
+$z-index-first: 1;
+$z-index-second: 2;
+$z-index-third: 3;
+
+// container paddings
+$container-padding-mobile: 15px;
+$container-padding-tablet: 20px;
+$container-padding-desktop: 30px;
+
+// adaptive sizes
+$mobile-size: 360px;
+$tablet-size: 768px;
+$desktop-size: 1440px;

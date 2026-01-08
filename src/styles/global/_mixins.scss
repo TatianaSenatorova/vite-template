@@ -1,0 +1,47 @@
+@use './variables' as *;
+
+@mixin vp-768 {
+  @media (min-width: $vp-768) {
+    @content;
+  }
+}
+
+@mixin vp-1024 {
+  @media (min-width: $vp-1024) {
+    @content;
+  }
+}
+
+@mixin vp-1280 {
+  @media (min-width: $vp-1280) {
+    @content;
+  }
+}
+
+@mixin vp-1440 {
+  @media (min-width: $vp-1440) {
+    @content;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  overflow: hidden;
+}
+
+@mixin fluid($property, $minSize, $maxSize, $minVp: 360, $maxVp: 1440) {
+  #{$property}: clamp(
+    #{$minSize}px,
+    calc(#{$minSize}px + (#{$maxSize} - #{$minSize}) * ((100vw - #{$minVp}px) / (#{$maxVp} - #{$minVp}))),
+    #{$maxSize}px
+  );
+}
+
+

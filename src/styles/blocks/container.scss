@@ -1,0 +1,16 @@
+@use '../global' as *;
+
+.container {
+  width: 100%;
+  max-width: $desktop-size;
+  margin: 0 auto;
+  padding: 0 $container-padding-mobile;
+
+  @include vp-768 {
+    padding: 0 $container-padding-tablet;
+  }
+
+  @include vp-1024 {
+    padding: 0 $container-padding-desktop;
+  }
+}

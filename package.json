@@ -1,0 +1,58 @@
+{
+  "name": "web-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20 <21"
+  },
+  "scripts": {
+    "start": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview",
+    "convert:images": "node convert-images.js",
+    "optimize:svg": "node optimize-svg.js",
+    "sprite": "node make-sprite.js",
+    "svg": "npm run optimize:svg && npm run sprite",
+    "lint:styles": "stylelint \"src/styles/**/*.scss\"",
+    "lint:js": "eslint src --ext .js",
+    "lint:html": "linthtml \"src/**/*.html\"",
+    "validate:html": "html-validate \"src/**/*.html\"",
+    "w3c": "html-validator \"src/**/*.html\" --quiet",
+    "ls-lint": "ls-lint",
+    "lint": "npm run lint:js && npm run lint:styles && npm run lint:html && npm run validate:html && npm run w3c && npm run ls-lint"
+  },
+  "devDependencies": {
+    "@linthtml/linthtml": "^0.10.2",
+    "@ls-lint/ls-lint": "^2.3.1",
+    "autoprefixer": "^10.4.23",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "html-validate": "^10.4.0",
+    "linthtml-config-htmlacademy": "^1.1.0",
+    "postcss": "^8.5.6",
+    "sass": "^1.95.1",
+    "sharp": "^0.34.5",
+    "stylelint": "^16.26.1",
+    "stylelint-config-htmlacademy": "^4.4.0",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-selector-bem-pattern": "^4.0.1",
+    "svgo": "^4.0.0",
+    "svgstore": "^3.0.1",
+    "vite": "^7.2.4",
+    "vite-plugin-image-optimizer": "^2.0.3",
+    "w3c-html-validator": "^2.0.2"
+  },
+  "browserslist": [
+    ">0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "gsap": "^3.14.2",
+    "node-fetch": "^3.3.2"
+  }
+}

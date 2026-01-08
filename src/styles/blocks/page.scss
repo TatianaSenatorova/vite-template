@@ -1,0 +1,19 @@
+@use '../global' as *;
+
+.page {
+  height: 100%;
+  scroll-behavior: smooth;
+
+  &__body {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    font-family: $font-primary;
+    font-size: 15px;
+    line-height: 1.1;
+    background-color: $color-white;
+    color:  $color-black;
+    display: flex;
+    flex-direction: column;
+  }
+}

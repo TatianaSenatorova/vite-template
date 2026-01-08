@@ -1,0 +1,16 @@
+ls:
+  .:
+    .dir: kebab-case
+
+  src:
+    .dir: kebab-case
+    .js: kebab-case
+    .scss: kebab-case
+    .html: kebab-case
+
+  "src/styles/blocks":
+    .scss: kebab-case
+
+ignore:
+  - node_modules
+  - dist
